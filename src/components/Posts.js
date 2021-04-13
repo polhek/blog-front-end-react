@@ -25,7 +25,13 @@ const Posts = () => {
     <div className="flex justify-center mt-10">
       {posts &&
         posts.map((post) => {
-          return <Post key={post._id} post={post} />;
+          return (
+            <Post
+              key={post._id}
+              post={post}
+              fetchAllComment={fetchAllComment}
+            />
+          );
         })}
     </div>
   );

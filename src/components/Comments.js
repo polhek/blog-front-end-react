@@ -1,7 +1,7 @@
 import Comment from './Comment';
 import NewComment from './NewComment';
 
-const Comments = ({ comments, showComments }) => {
+const Comments = ({ postID, comments, showComments, fetchAllComment }) => {
   const cardStyle = {
     visibility: showComments ? 'hidden' : 'visible',
     maxHeight: showComments ? '0' : '100%',
@@ -10,7 +10,7 @@ const Comments = ({ comments, showComments }) => {
   };
 
   return (
-    <div style={cardStyle} className="bg-gray-200 p-5 rounded shadow ">
+    <div style={cardStyle} className="bg-gray-200 p-5  rounded shadow ">
       <h3 className="font-bold">Comments:</h3>
       {comments &&
         comments.map((comment) => {
@@ -22,7 +22,7 @@ const Comments = ({ comments, showComments }) => {
             />
           );
         })}
-      <NewComment />
+      <NewComment postID={postID} fetchAllComment={fetchAllComment} />
     </div>
   );
 };

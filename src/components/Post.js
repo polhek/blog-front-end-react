@@ -2,7 +2,7 @@ import Comments from './Comments';
 import { useState } from 'react';
 import { FaComments } from 'react-icons/fa';
 
-const Post = ({ post }) => {
+const Post = ({ post, fetchAllComment }) => {
   const [showComments, setShowComments] = useState(false);
 
   const showClickHandler = () => {
@@ -14,7 +14,10 @@ const Post = ({ post }) => {
     background: showComments ? 'none' : 'white',
   };
   return (
-    <div style={containerStyle} className="w-100 w-3/5 flex flex-col  rounded ">
+    <div
+      style={containerStyle}
+      className="w-100 w-3/5 flex flex-col   rounded "
+    >
       <div className="bg-white rounded-xl shadow ">
         <div className="flex justify-between p-5">
           <h2>Title: {post.title}</h2>
@@ -33,7 +36,12 @@ const Post = ({ post }) => {
         </div>
       </div>
 
-      <Comments comments={post.comments} showComments={showComments} />
+      <Comments
+        comments={post.comments}
+        postID={post._id}
+        showComments={showComments}
+        fetchAllComment={fetchAllComment}
+      />
     </div>
   );
 };
