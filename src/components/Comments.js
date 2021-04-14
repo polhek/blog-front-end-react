@@ -3,9 +3,9 @@ import NewComment from './NewComment';
 
 const Comments = ({ postID, comments, showComments, fetchAllComment }) => {
   const cardStyle = {
-    visibility: showComments ? 'hidden' : 'visible',
-    maxHeight: showComments ? '0' : '100%',
-    opacity: showComments ? 0 : 1,
+    visibility: !showComments ? 'hidden' : 'visible',
+    maxHeight: !showComments ? '0' : '100%',
+    opacity: !showComments ? 0 : 1,
     transition: 'all 0.5s ease-in-out',
   };
 
