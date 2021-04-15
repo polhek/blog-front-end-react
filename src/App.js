@@ -21,5 +21,11 @@ function App() {
     </Router>
   );
 }
+//! mrbet ne rabm
+const mapStateToProps = (state) => {
+  return {
+    userReducer: state.userReducer,
+  };
+};
 
 export default App;
