@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import AdminPost from './AdminPost';
+import { Link, Redirect } from 'react-router-dom';
 
 const AdminPanel = () => {
   const [adminPosts, setAdminPosts] = useState([]);
@@ -20,8 +21,8 @@ const AdminPanel = () => {
       });
   };
   return (
-    <div className="flex justify-center w-100">
-      <ol className="list-decimal w-full flex justify-center">
+    <div className="flex justify-center w-100 flex-col items-center">
+      <ol className="list-decimal w-full flex flex-col items-center justify-center">
         {adminPosts.map((aPost) => {
           return (
             <AdminPost
@@ -32,6 +33,13 @@ const AdminPanel = () => {
           );
         })}
       </ol>
+      <div className="mt-40">
+        <Link to="/new-post">
+          <button className="bg-gray-500 hover:bg-gray-900 text-white font-bold py-2 px-4 shadow rounded-full">
+            New Blog Post
+          </button>
+        </Link>
+      </div>
     </div>
   );
 };

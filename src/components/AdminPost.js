@@ -1,10 +1,10 @@
 import axios from 'axios';
-import { useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 
 //! Delete nasledno!!!!
 
 const AdminPost = ({ post, fetchAdminComments }) => {
-  const currentUser = useDispatch((state) => state.user);
+  const currentUser = useSelector((state) => state.user);
 
   const changeBlogStatus = () => {
     console.log('lounched');
@@ -31,6 +31,27 @@ const AdminPost = ({ post, fetchAdminComments }) => {
         .catch((e) => console.log(e));
     }
   };
+
+  //  TODO: najprej nared, dodajanje novih postov, pol pa dodej še tu v onClick...
+  const deleteBlogPost = () => {
+    console.log('delete lounched!!');
+    const token = localStorage.getItem('token');
+    if (token) {
+      axios
+        .delete(`/api/posts/${post._id}/delete`, {
+          headers: { Authorization: token },
+          params: { id: post._id },
+        })
+        .then((res) => {
+          console.log(res.status);
+          fetchAdminComments();
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    }
+  };
+
   return (
     <div className="bg-white flex rounded-xl  mt-10 p-5 shadow-xl border">
       <li className="flex justify-around items-center">

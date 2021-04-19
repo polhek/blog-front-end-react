@@ -3,6 +3,7 @@ import Navigation from './components/Navigation';
 import Posts from './components/Posts';
 import Admin from './components/Admin';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import NewPost from './components/NewPost';
 
 function App() {
   return (
@@ -15,6 +16,9 @@ function App() {
           </Route>
           <Route path="/admin">
             <Admin />
+          </Route>
+          <Route path="/new-post">
+            <NewPost />
           </Route>
         </Switch>
       </div>

@@ -16,7 +16,7 @@ const Post = ({ post, fetchAllComment }) => {
   return (
     <div
       style={containerStyle}
-      className="w-100 w-3/5 flex flex-col   rounded "
+      className="w-100 w-3/5 flex flex-col mt-10 rounded"
     >
       <div className="bg-white rounded-xl shadow ">
         <div className="flex justify-between p-5">

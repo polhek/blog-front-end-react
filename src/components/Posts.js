@@ -22,7 +22,7 @@ const Posts = () => {
   };
 
   return (
-    <div className="flex justify-center mt-10">
+    <div className="flex justify-center flex-col items-center mt-10">
       {posts &&
         posts.map((post) => {
           return (
