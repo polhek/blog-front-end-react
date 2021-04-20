@@ -33,7 +33,7 @@ const NewPost = () => {
           console.log(res.status);
           setText('');
           setTitle('');
-          history.push('/');
+          history.push('');
         })
         .catch((err) => {
           console.log(err);

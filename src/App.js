@@ -12,7 +12,7 @@ function App() {
       <div className="bg-gray-300">
         <Navigation />
         <Switch>
-          <Route path="/" exact>
+          <Route path="" exact>
             <Posts />
           </Route>
           <Route path="/admin">
