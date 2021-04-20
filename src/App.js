@@ -12,14 +12,14 @@ function App() {
       <div className="bg-gray-300">
         <Navigation />
         <Switch>
-          <Route path="" exact>
-            <Posts />
-          </Route>
           <Route path="/admin">
             <Admin />
           </Route>
           <Route path="/new-post">
             <NewPost />
+          </Route>
+          <Route path="" exact>
+            <Posts />
           </Route>
         </Switch>
       </div>
