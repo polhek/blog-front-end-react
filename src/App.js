@@ -1,11 +1,11 @@
 import './App.css';
-import { useEffect } from 'react';
+
 import Navigation from './components/Navigation';
 import Posts from './components/Posts';
 import Admin from './components/Admin';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 import NewPost from './components/NewPost';
-
+import { HashRouter as Router } from 'react-router-dom';
 function App() {
   return (
     <Router>
