@@ -1,8 +1,6 @@
 import axios from 'axios';
 import { useSelector } from 'react-redux';
 
-//! Delete nasledno!!!!
-
 const AdminPost = ({ post, fetchAdminComments }) => {
   const currentUser = useSelector((state) => state.user);
 
@@ -32,7 +30,6 @@ const AdminPost = ({ post, fetchAdminComments }) => {
     }
   };
 
-  //  TODO: najprej nared, dodajanje novih postov, pol pa dodej še tu v onClick...
   const deleteBlogPost = () => {
     console.log('delete lounched!!');
     const token = localStorage.getItem('token');
@@ -84,7 +81,10 @@ const AdminPost = ({ post, fetchAdminComments }) => {
           </>
         )}
         <p className="font-bold mx-4">You want to delete this blog?</p>
-        <button className=" bg-blue-600 p-1 rounded hover:bg-blue-800 hover:shadow">
+        <button
+          onClick={deleteBlogPost}
+          className="bg-blue-600 p-1 rounded hover:bg-blue-800 hover:shadow"
+        >
           <span className="text-white">Delete blog!</span>
         </button>
       </li>

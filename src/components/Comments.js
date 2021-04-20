@@ -19,6 +19,8 @@ const Comments = ({ postID, comments, showComments, fetchAllComment }) => {
               key={comment._id}
               text={comment.text}
               author={comment.author}
+              id={comment._id}
+              fetchAllComment={fetchAllComment}
             />
           );
         })}

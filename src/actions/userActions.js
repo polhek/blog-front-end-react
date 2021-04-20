@@ -16,3 +16,5 @@ export const fetchUser = (userInfo) => (dispatch) => {
       dispatch(setUser(data.data.user));
     });
 };
+
+export const setUserUser = (payload) => ({ type: 'SET_USER', payload });

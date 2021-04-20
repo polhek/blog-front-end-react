@@ -1,4 +1,5 @@
 import './App.css';
+import { useEffect } from 'react';
 import Navigation from './components/Navigation';
 import Posts from './components/Posts';
 import Admin from './components/Admin';
@@ -8,7 +9,7 @@ import NewPost from './components/NewPost';
 function App() {
   return (
     <Router>
-      <div className="bg-gray-300 h-screen">
+      <div className="bg-gray-300">
         <Navigation />
         <Switch>
           <Route path="/" exact>

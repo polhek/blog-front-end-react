@@ -16,10 +16,9 @@ const NewComment = ({ postID, fetchAllComment }) => {
       })
       .then(
         (response) => {
-          console.log(response);
           setComment('');
           setUsername('');
-          fetchAllComment()
+          fetchAllComment();
         },
         (error) => {
           console.log(error);

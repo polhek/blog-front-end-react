@@ -1,22 +1,18 @@
 import { useState } from 'react';
-import AdminPanel from './AdminPanel'
+import AdminPanel from './AdminPanel';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchUser } from '../actions/userActions';
-
 
 const Admin = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-
   const dispatch = useDispatch();
-  const currentUser = useSelector((state) => state.user);
-  const loggedIn = useSelector((state)=> state.loggedIn)
+  const loggedIn = useSelector((state) => state.loggedIn);
+
   const adminSubmitHandler = (e) => {
     e.preventDefault();
     const user = { username: username, password: password };
     dispatch(fetchUser(user));
-
-
   };
 
   if (!loggedIn) {
@@ -60,16 +56,14 @@ const Admin = () => {
               </button>
             </div>
           </form>
-
         </div>
       </div>
     );
   }
 
   if (loggedIn) {
-    return <AdminPanel />
+    return <AdminPanel />;
   }
-
 };
 
 export default Admin;

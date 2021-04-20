@@ -1,10 +1,11 @@
 import Comments from './Comments';
 import { useState } from 'react';
 import { FaComments } from 'react-icons/fa';
+import Moment from 'react-moment';
 
 const Post = ({ post, fetchAllComment }) => {
   const [showComments, setShowComments] = useState(false);
-
+  const dateToFormat = new Date(post.createdAt);
   const showClickHandler = () => {
     setShowComments(!showComments);
   };
@@ -32,7 +33,12 @@ const Post = ({ post, fetchAllComment }) => {
           >
             <FaComments className="mr-2" /> {post.comments.length}
           </button>
-          <h3>Created at: {post.createdAt}</h3>
+          <h3>
+            Created at:
+            <Moment className="px-1" format="YYYY-MM-DD HH:mm">
+              {dateToFormat}
+            </Moment>
+          </h3>
         </div>
       </div>
 
