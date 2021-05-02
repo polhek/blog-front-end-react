@@ -2,7 +2,7 @@
 
 ### Api Link:
 
-    - API Link: [API Github Repository](https://github.com/polhek/blog-api/)
+    - [API Github Repository](https://github.com/polhek/blog-api/)
 
 ### Quick Summary:
 
