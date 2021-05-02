@@ -2,7 +2,7 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import Post from './Post';
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { setUserUser } from '../actions/userActions';
 
 const Posts = () => {
@@ -44,13 +44,15 @@ const Posts = () => {
     <div className="flex justify-center flex-col items-center mt-10">
       {posts &&
         posts.map((post) => {
-          return (
-            <Post
-              key={post._id}
-              post={post}
-              fetchAllComment={fetchAllComment}
-            />
-          );
+          if (post.status) {
+            return (
+              <Post
+                key={post._id}
+                post={post}
+                fetchAllComment={fetchAllComment}
+              />
+            );
+          }
         })}
     </div>
   );

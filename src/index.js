@@ -7,7 +7,6 @@ import { Provider } from 'react-redux';
 import { applyMiddleware, createStore, compose } from 'redux';
 import userReducer from './reducers/userReducer';
 import thunk from 'redux-thunk';
-import rootReducer from './reducers/index';
 
 axios.defaults.baseURL = 'https://fierce-everglades-07063.herokuapp.com/';
 

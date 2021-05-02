@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import AdminPost from './AdminPost';
-import { Link, Redirect } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const AdminPanel = () => {
   const [adminPosts, setAdminPosts] = useState([]);

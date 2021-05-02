@@ -1,11 +1,11 @@
 import './App.css';
-
 import Navigation from './components/Navigation';
 import Posts from './components/Posts';
 import Admin from './components/Admin';
 import { Switch, Route } from 'react-router-dom';
 import NewPost from './components/NewPost';
 import { HashRouter as Router } from 'react-router-dom';
+
 function App() {
   return (
     <Router>
@@ -26,11 +26,5 @@ function App() {
     </Router>
   );
 }
-//! mrbet ne rabm
-const mapStateToProps = (state) => {
-  return {
-    userReducer: state.userReducer,
-  };
-};
 
 export default App;
