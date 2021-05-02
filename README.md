@@ -2,7 +2,7 @@
 
 ### Api Link:
 
-    - [API Github Repository][https://github.com/polhek/blog-api/]
+    - [API Github Repository][1]
 
 ### Quick Summary:
 
@@ -23,3 +23,5 @@ This app was made with [Create React App](https://github.com/facebook/create-rea
     - PassportJS
 
 ### Link to app: [Blog-frontend-webpage](https://polhek.github.io/blog-front-end-react/#/)
+
+[1]: (https://github.com/polhek/blog-api/)
