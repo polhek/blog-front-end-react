@@ -2,7 +2,7 @@
 
 ### Api Link:
 
-    [API Github Repository][https://github.com/polhek/blog-api/]
+    - [API Github Repository][https://polhek.github.io/blog-front-end-react/#/]
 
 ### Quick Summary:
 
